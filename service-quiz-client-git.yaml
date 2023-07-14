@@ -2,10 +2,6 @@
 apiVersion: v1
 metadata:
   name: quiz-client-git
-  namespace: pipelines-quiz-client
-  uid: f4634f8a-cfb4-4916-8f59-ca0209ad6b19
-  resourceVersion: '36133778'
-  creationTimestamp: '2023-07-11T03:40:09Z'
   labels:
     app: quiz-client-git
     app.kubernetes.io/component: quiz-client-git
@@ -18,9 +14,8 @@ metadata:
     app.openshift.io/vcs-ref: ''
     app.openshift.io/vcs-uri: 'https://github.com/kirannreddy/quiz-client.git'
     openshift.io/generated-by: OpenShiftWebConsole
-2          'f:type': {}
+           'f:type': {}
 spec:
-  clusterIP: 172.30.84.149
   ipFamilies:
     - IPv4
   ports:
@@ -29,13 +24,9 @@ spec:
       port: 8080
       targetPort: 8080
   internalTrafficPolicy: Cluster
-  clusterIPs:
-    - 172.30.84.149
   type: ClusterIP
   ipFamilyPolicy: SingleStack
   sessionAffinity: None
   selector:
     app: quiz-client-git
     deployment: quiz-client-git
-status:
-  loadBalancer: {}
