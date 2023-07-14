@@ -10,11 +10,6 @@ metadata:
     app.kubernetes.io/part-of: quiz-client-git-app
     app.openshift.io/runtime: nodejs
     app.openshift.io/runtime-version: 16-ubi8
-  annotations:
-    app.openshift.io/vcs-ref: ''
-    app.openshift.io/vcs-uri: 'https://github.com/kirannreddy/quiz-client.git'
-    openshift.io/generated-by: OpenShiftWebConsole
-           'f:type': {}
 spec:
   ipFamilies:
     - IPv4
