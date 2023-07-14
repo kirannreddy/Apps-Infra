@@ -2,10 +2,6 @@
 apiVersion: route.openshift.io/v1
 metadata:
   name: quiz-client-git
-  namespace: pipelines-quiz-client
-  uid: b4f0035f-aff2-4eda-9c9a-86eb710d8aa8
-  resourceVersion: '36133784'
-  creationTimestamp: '2023-07-11T03:40:10Z'
   labels:
     app: quiz-client-git
     app.kubernetes.io/component: quiz-client-git
@@ -17,44 +13,6 @@ metadata:
   annotations:
     openshift.io/host.generated: 'true'
   managedFields:
-    - manager: Mozilla
-      operation: Update
-      apiVersion: route.openshift.io/v1
-      time: '2023-07-11T03:40:10Z'
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:metadata':
-          'f:labels':
-            .: {}
-            'f:app': {}
-            'f:app.kubernetes.io/component': {}
-            'f:app.kubernetes.io/instance': {}
-            'f:app.kubernetes.io/name': {}
-            'f:app.kubernetes.io/part-of': {}
-            'f:app.openshift.io/runtime': {}
-            'f:app.openshift.io/runtime-version': {}
-        'f:spec':
-          'f:port':
-            .: {}
-            'f:targetPort': {}
-          'f:tls':
-            .: {}
-            'f:insecureEdgeTerminationPolicy': {}
-            'f:termination': {}
-          'f:to':
-            'f:kind': {}
-            'f:name': {}
-            'f:weight': {}
-          'f:wildcardPolicy': {}
-    - manager: openshift-router
-      operation: Update
-      apiVersion: route.openshift.io/v1
-      time: '2023-07-11T03:40:10Z'
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:status':
-          'f:ingress': {}
-      subresource: status
 spec:
   host: >-
     quiz-client-git-pipelines-quiz-client.apps.cluster-225g7.225g7.sandbox1786.opentlc.com
@@ -68,14 +26,3 @@ spec:
     termination: edge
     insecureEdgeTerminationPolicy: Redirect
   wildcardPolicy: None
-status:
-  ingress:
-    - host: >-
-        quiz-client-git-pipelines-quiz-client.apps.cluster-225g7.225g7.sandbox1786.opentlc.com
-      routerName: default
-      conditions:
-        - type: Admitted
-          status: 'True'
-          lastTransitionTime: '2023-07-11T03:40:10Z'
-      wildcardPolicy: None
-      routerCanonicalHostname: router-default.apps.cluster-225g7.225g7.sandbox1786.opentlc.com
