@@ -2,10 +2,6 @@
 apiVersion: v1
 metadata:
   name: quiz-api-git-1
-  namespace: pipelines-quiz-api
-  uid: 1ec61705-6c41-45a2-9bf1-c67b4d60d9ec
-  resourceVersion: '36144307'
-  creationTimestamp: '2023-07-11T03:53:40Z'
   labels:
     app: quiz-api-git-1
     app.kubernetes.io/component: quiz-api-git-1
@@ -18,43 +14,7 @@ metadata:
     app.openshift.io/vcs-ref: ''
     app.openshift.io/vcs-uri: 'https://github.com/kirannreddy/quiz-api.git'
     openshift.io/generated-by: OpenShiftWebConsole
-  managedFields:
-    - manager: Mozilla
-      operation: Update
-      apiVersion: v1
-      time: '2023-07-11T03:53:40Z'
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:metadata':
-          'f:annotations':
-            .: {}
-            'f:app.openshift.io/vcs-ref': {}
-            'f:app.openshift.io/vcs-uri': {}
-            'f:openshift.io/generated-by': {}
-          'f:labels':
-            .: {}
-            'f:app': {}
-            'f:app.kubernetes.io/component': {}
-            'f:app.kubernetes.io/instance': {}
-            'f:app.kubernetes.io/name': {}
-            'f:app.kubernetes.io/part-of': {}
-            'f:app.openshift.io/runtime': {}
-            'f:app.openshift.io/runtime-version': {}
-        'f:spec':
-          'f:internalTrafficPolicy': {}
-          'f:ports':
-            .: {}
-            'k:{"port":8080,"protocol":"TCP"}':
-              .: {}
-              'f:name': {}
-              'f:port': {}
-              'f:protocol': {}
-              'f:targetPort': {}
-          'f:selector': {}
-          'f:sessionAffinity': {}
-          'f:type': {}
 spec:
-  clusterIP: 172.30.131.106
   ipFamilies:
     - IPv4
   ports:
@@ -63,13 +23,9 @@ spec:
       port: 8080
       targetPort: 8080
   internalTrafficPolicy: Cluster
-  clusterIPs:
-    - 172.30.131.106
   type: ClusterIP
   ipFamilyPolicy: SingleStack
   sessionAffinity: None
   selector:
     app: quiz-api-git-1
     deployment: quiz-api-git-1
-status:
-  loadBalancer: {}
