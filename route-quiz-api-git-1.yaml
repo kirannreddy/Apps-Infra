@@ -11,8 +11,6 @@ metadata:
     app.openshift.io/runtime: dotnet
     app.openshift.io/runtime-version: 7.0-ubi8
 spec:
-  host: >-
-    quiz-api-git-1-pipelines-quiz-api.apps.cluster-225g7.225g7.sandbox1786.opentlc.com
   to:
     kind: Service
     name: quiz-api-git-1
@@ -23,14 +21,3 @@ spec:
     termination: edge
     insecureEdgeTerminationPolicy: Redirect
   wildcardPolicy: None
-status:
-  ingress:
-    - host: >-
-        quiz-api-git-1-pipelines-quiz-api.apps.cluster-225g7.225g7.sandbox1786.opentlc.com
-      routerName: default
-      conditions:
-        - type: Admitted
-          status: 'True'
-          lastTransitionTime: '2023-07-11T03:53:41Z'
-      wildcardPolicy: None
-      routerCanonicalHostname: router-default.apps.cluster-225g7.225g7.sandbox1786.opentlc.com
